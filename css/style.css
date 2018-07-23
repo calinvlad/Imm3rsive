@@ -305,7 +305,7 @@ a {
     font-weight: 700; }
 
 .contact {
-  background-color: rgba(255, 192, 203, 0.4);
+  background-color: inherit;
   height: 60rem;
   padding-left: 15%;
   display: flex;
@@ -330,7 +330,7 @@ a {
       width: 100%; }
   .contact__paragraph {
     font-size: 1.6rem;
-    margin: 3rem 0; }
+    margin: 3rem 0 5rem 0; }
 
 .form {
   display: flex;
@@ -339,6 +339,7 @@ a {
   font-size: 1.2rem; }
 
 .input {
+  background-color: inherit;
   font-size: inherit;
   font-family: inherit;
   font-weight: 700;
@@ -346,18 +347,20 @@ a {
   border: none;
   outline: none;
   padding: 1.5rem;
-  margin: 1.5rem 0;
   color: #646464;
   border-bottom: 3px solid #FCDE3B; }
+  .input--middle {
+    margin: 6rem 0; }
   .input::placeholder {
     color: #e3e3e3;
     font-weight: bold; }
   .input:focus {
     border-bottom: 3px solid #e7c404; }
-  .input:required:active {
+  .input:focus:invalid {
     border-bottom: 3px solid red; }
 
 .textarea {
+  background-color: inherit;
   font-size: inherit;
   font-family: inherit;
   font-weight: 700;
@@ -366,9 +369,11 @@ a {
   outline: none;
   padding: 1.5rem;
   margin-bottom: 5rem;
-  color: #646464;
   border-bottom: 3px solid #FCDE3B; }
+  .textarea::placeholder {
+    color: #e3e3e3; }
   .textarea:focus {
+    color: #646464;
     border-bottom: 3px solid #e7c404; }
 
 .popup {
@@ -450,6 +455,58 @@ button {
   border-radius: 1.7rem;
   transition: all .2s;
   outline: none; }
+
+button {
+  z-index: 500;
+  border-radius: 1rem; }
+
+.button {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: blue;
+  padding: 1rem 3rem;
+  color: #f4f4f4;
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer; }
+  .button::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    transition: all .4s;
+    border-radius: 1rem;
+    border: 2px solid blue; }
+  .button:hover::before {
+    top: 0;
+    left: 0;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2); }
+  .button:active::before {
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3); }
+  .button:active {
+    background-color: #0000b3; }
+
+.button--a {
+  border-radius: 1rem;
+  text-transform: uppercase; }
+
+.button--transparent {
+  background-color: #f4f4f4;
+  color: blue;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem 3rem;
+  border: 2px solid blue;
+  outline: none;
+  position: relative;
+  transition: all .4s; }
+  .button--transparent:hover {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2); }
+  .button--transparent:active {
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3); }
 
 .logo {
   height: 6rem; }

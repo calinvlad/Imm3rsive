@@ -1,5 +1,5 @@
 .contact {
-    background-color: rgba(pink, .4);
+    background-color: inherit;
     height: 60rem;
     padding-left: 15%;
 
@@ -32,7 +32,7 @@
 
     &__paragraph {
         font-size: 1.6rem;
-        margin: 3rem 0;
+        margin: 3rem 0 5rem 0;;
     }
 }
 
@@ -47,6 +47,7 @@
 
 
 .input {
+    background-color: inherit;
     font-size: inherit;
     font-family: inherit;
     font-weight: 700;
@@ -54,9 +55,13 @@
     border: none;
     outline: none;
     padding: 1.5rem;
-    margin: 1.5rem 0;
+    // margin: 1.5rem 0;
     color: darken($grey, 50%); 
     border-bottom: 3px solid $primary;
+
+    &--middle {
+        margin: 6rem 0;
+    }
 
     &::placeholder {
         color: $grey;
@@ -66,12 +71,14 @@
     &:focus {
         border-bottom:3px solid darken($primary, 15%);
     }
-    &:required:active {
-        border-bottom: 3px solid red;
+
+    &:focus:invalid {
+        border-bottom: 3px solid $red;
     }
 }
 
 .textarea {
+    background-color: inherit;
     font-size: inherit;
     font-family: inherit;
     font-weight: 700;
@@ -80,10 +87,15 @@
     outline: none;
     padding: 1.5rem;
     margin-bottom: 5rem;
-    color: darken($grey, 50%);
     border-bottom: 3px solid $primary;
 
+    &::placeholder {
+        color: $grey;
+    }
+
     &:focus {
+        color: darken($grey, 50%);
         border-bottom:3px solid darken($primary, 15%);
     }
 }
+
