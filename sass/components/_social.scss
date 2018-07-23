@@ -1,0 +1,17 @@
+.social {
+    // background-color: green;
+    height: 10rem;
+    padding-right: 5%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__link {
+        margin: 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
