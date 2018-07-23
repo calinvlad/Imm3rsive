@@ -12,11 +12,13 @@
     // align-items: flex-start;
 
     &__side {
+        font-family: 'Libre Baskerville', serif;
         position: absolute;
-        right: 0;
-
-        font-size: 12rem;
+        left: 55%;
+        color: rgba(lighten($primary, 25%), .5);
+        font-size: 13rem;
         transform: rotate(90deg);
+        z-index: 100;
     }
 
     &__title {

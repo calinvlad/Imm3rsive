@@ -1,20 +1,37 @@
 .info {
     // background-color: inherit;
     height: 70rem;
+    position: relative;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
+    &__bubble {
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+        width: 17.5%;
+        z-index: -50;
+
+        &--1 {
+            position: absolute;
+            right: 3rem;
+            top: 3rem;;
+            width: 15%;
+            z-index: -50;
+        }
+    }
+
     &__box {
         // background-color: rgba(green, .4);
-        margin-right: 15%;
+        margin-right: 10%;
     }
 
     &__title {
         font-size: 2rem;
-        font-weight: 700;
+        // font-weight: 700;
         display: inline-block;
         padding: 1rem 0;
         position: relative;

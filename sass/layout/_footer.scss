@@ -1,6 +1,6 @@
 .footer {
     // margin-top: 8rem;
-    background-color: $blue;
+    background-color: $blue-dark; 
     color: $white;
     height: 45rem;
     position: relative;
@@ -33,7 +33,6 @@
     &__title {
         font-size: 2rem;
         color: inherit;
-        font-weight: 700;
         margin-bottom: 3rem;
     }
 
@@ -46,7 +45,6 @@
     &__social {
         &--title {
             font-size: 1.75rem;
-            font-weight: 700;
             margin-top: 5rem;
         }
 
@@ -63,7 +61,6 @@
 .footer__maps {
     width: 60%;
     height: 30rem;
-    background-color: red;
     align-self: center;
 }
 

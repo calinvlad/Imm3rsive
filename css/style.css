@@ -19,22 +19,25 @@ iframe {
   outline: none; }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Libre Baskerville', serif;
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.6;
-  color: #333;
+  color: #303032;
   background-color: #f4f4f4; }
 
 h1 {
   font-family: "Lato", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase; }
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Righteous', cursive; }
 
 h3 {
-  font-weight: 400; }
+  font-weight: 400;
+  font-family: 'Righteous', cursive; }
 
 a {
+  font-family: 'Libre Baskerville', serif;
   text-decoration: none;
   color: inherit;
   z-index: 100; }
@@ -43,10 +46,10 @@ a {
   color: #FCDE3B; }
 
 .black {
-  color: black; }
+  color: #303032; }
 
 .blue {
-  color: blue; }
+  color: #0378db; }
 
 .first {
   font-size: 3rem; }
@@ -58,11 +61,18 @@ a {
   transform: rotate(45deg); }
 
 .hero {
+  top: 8rem;
   height: 65rem;
   padding: 0 0 0 15%;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .hero__bubble {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%; }
   .hero__img {
     height: 105%;
     z-index: -50; }
@@ -73,10 +83,13 @@ a {
       font-size: 2.25rem;
       margin-top: 1rem;
       margin-bottom: 2.5rem; }
+  .hero__btn {
+    font-size: 1.75rem; }
 
 .social {
   height: 10rem;
   padding-right: 5%;
+  margin-top: 10rem;
   display: flex;
   justify-content: flex-end;
   align-items: center; }
@@ -131,7 +144,6 @@ a {
       width: 22.5%; }
     .despre__content--title {
       font-size: 1.4rem;
-      font-weight: 700;
       margin: 1rem 0 .75rem 0; }
     .despre__content--paragraph {
       width: 80%;
@@ -140,15 +152,27 @@ a {
 
 .info {
   height: 70rem;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
+  .info__bubble {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    width: 17.5%;
+    z-index: -50; }
+    .info__bubble--1 {
+      position: absolute;
+      right: 3rem;
+      top: 3rem;
+      width: 15%;
+      z-index: -50; }
   .info__box {
-    margin-right: 15%; }
+    margin-right: 10%; }
   .info__title {
     font-size: 2rem;
-    font-weight: 700;
     display: inline-block;
     padding: 1rem 0;
     position: relative; }
@@ -191,10 +215,16 @@ a {
   background-color: inherit;
   min-height: 70rem;
   margin-top: 5rem;
+  padding-bottom: 10rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .portofoliu__bubble {
+    position: absolute;
+    top: 2rem;
+    left: 0; }
   .portofoliu__title {
     font-size: 2.5rem; }
   .portofoliu__box--title {
@@ -266,10 +296,13 @@ a {
   flex-direction: column;
   justify-content: center; }
   .grafic__side {
+    font-family: 'Libre Baskerville', serif;
     position: absolute;
-    right: 0;
-    font-size: 12rem;
-    transform: rotate(90deg); }
+    left: 55%;
+    color: rgba(254, 243, 185, 0.5);
+    font-size: 13rem;
+    transform: rotate(90deg);
+    z-index: 100; }
   .grafic__title {
     font-size: 2rem;
     line-height: 3rem; }
@@ -333,12 +366,12 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    width: 17.5%;
     z-index: -50; }
   .contact__img {
-    height: 85%; }
+    height: 80%; }
   .contact__title {
     font-size: 2.5rem;
-    font-weight: 700;
     position: relative;
     display: inline-block; }
     .contact__title::before {
@@ -401,60 +434,6 @@ a {
     color: #6e6e6e;
     border-bottom: 3px solid #e7c404; }
 
-.footer {
-  background-color: blue;
-  color: #f4f4f4;
-  height: 45rem;
-  position: relative;
-  padding-left: 15%;
-  padding-right: 15%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  .footer__logo {
-    height: 6rem;
-    position: absolute;
-    top: -3rem;
-    left: 50%;
-    transform: translate(-50%); }
-  .footer__box {
-    width: 40%;
-    min-height: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    justify-content: space-between; }
-  .footer__title {
-    font-size: 2rem;
-    color: inherit;
-    font-weight: 700;
-    margin-bottom: 3rem; }
-  .footer__adress {
-    font-size: 1.2rem;
-    margin: .5rem;
-    color: inherit; }
-  .footer__social--title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-top: 5rem; }
-  .footer__social--icon {
-    height: 3.5rem;
-    margin-right: 1rem; }
-
-.footer__maps {
-  width: 60%;
-  height: 30rem;
-  background-color: red;
-  align-self: center; }
-
-.copyright {
-  font-size: .9rem;
-  color: inherit;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%); }
-
 .popup {
   background-color: rgba(252, 222, 59, 0.9);
   height: 100vh;
@@ -488,11 +467,11 @@ a {
   transition: all .2s; }
 
 .btn:hover {
-  box-shadow: 0 1rem 2rem rgba(51, 51, 51, 0.2); }
+  box-shadow: 0 1rem 2rem rgba(48, 48, 50, 0.2); }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 0.1rem rgba(51, 51, 51, 0.2);
+  box-shadow: 0 0.5rem 0.1rem rgba(48, 48, 50, 0.2);
   z-index: -2; }
 
 .btn::after {
@@ -508,14 +487,14 @@ a {
   transition: all .3s; }
 
 .btn-blue {
-  background: blue;
+  background: #0378db;
   color: #f4f4f4;
   padding: 1rem 2.2rem; }
   .btn-blue::after {
-    border: 1px solid blue; }
+    border: 1px solid #0378db; }
   .btn-blue:active {
     position: relative;
-    background: #0000e6; }
+    background: #036ac2; }
     .btn-blue:active::after {
       content: "";
       width: 100%;
@@ -524,7 +503,7 @@ a {
       z-index: -1;
       top: 0;
       left: 0;
-      border: 2px solid blue; }
+      border: 2px solid #0378db; }
 
 button {
   text-transform: uppercase;
@@ -540,9 +519,9 @@ button {
   border-radius: 1rem; }
 
 .button {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  background-color: blue;
+  background-color: #0378db;
   padding: 1.25rem 3rem;
   color: #f4f4f4;
   border: none;
@@ -558,7 +537,7 @@ button {
     left: 10%;
     transition: all .4s;
     border-radius: 1rem;
-    border: 2px solid blue; }
+    border: 2px solid #0378db; }
   .button:hover::before {
     top: 0;
     left: 0;
@@ -566,7 +545,7 @@ button {
   .button:active::before {
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3); }
   .button:active {
-    background-color: #0000b3; }
+    background-color: #024f90; }
 
 .button--a {
   border-radius: 1rem;
@@ -575,11 +554,11 @@ button {
 
 .button--transparent {
   background-color: #f4f4f4;
-  color: blue;
-  font-size: 1.6rem;
+  color: #0378db;
+  font-size: 1.5rem;
   font-weight: 700;
   padding: 1.5rem 3rem;
-  border: 1px solid blue;
+  border: 1px solid #0378db;
   outline: none;
   position: relative;
   transition: all .4s; }
@@ -597,10 +576,12 @@ button {
   padding: 0 5%;
   height: 8rem;
   border-bottom: 1px solid #FCDE3B;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  position: fixed;
+  width: 100%; }
   .header__box {
     display: flex;
     flex-direction: row;
@@ -623,3 +604,54 @@ button {
       width: 100%; }
     .header__link:last-child {
       margin-right: -1.5rem; }
+
+.footer {
+  background-color: #02569c;
+  color: #f4f4f4;
+  height: 45rem;
+  position: relative;
+  padding-left: 15%;
+  padding-right: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .footer__logo {
+    height: 6rem;
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translate(-50%); }
+  .footer__box {
+    width: 40%;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between; }
+  .footer__title {
+    font-size: 2rem;
+    color: inherit;
+    margin-bottom: 3rem; }
+  .footer__adress {
+    font-size: 1.2rem;
+    margin: .5rem;
+    color: inherit; }
+  .footer__social--title {
+    font-size: 1.75rem;
+    margin-top: 5rem; }
+  .footer__social--icon {
+    height: 3.5rem;
+    margin-right: 1rem; }
+
+.footer__maps {
+  width: 60%;
+  height: 30rem;
+  align-self: center; }
+
+.copyright {
+  font-size: .9rem;
+  color: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); }

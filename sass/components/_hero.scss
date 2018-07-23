@@ -1,11 +1,20 @@
 .hero {
     // background-color: $white;
+    top: 8rem;
     height: 65rem;
     padding: 0 0 0 15%;
+    position: relative;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &__bubble {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 10%;
+    }
 
     &__img {
        height: 105%;
@@ -30,6 +39,6 @@
     }
 
     &__btn {
-        
+        font-size: 1.75rem; 
     }
 }
