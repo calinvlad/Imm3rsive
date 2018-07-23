@@ -9,7 +9,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 iframe {
   width: 100%;
@@ -49,6 +50,12 @@ a {
 
 .first {
   font-size: 3rem; }
+
+.first--uppercase {
+  font-size: 3.5rem; }
+
+.rotate {
+  transform: rotate(45deg); }
 
 .hero {
   height: 60rem;
@@ -176,7 +183,7 @@ a {
 
 .portofoliu {
   background-color: inherit;
-  height: 60rem;
+  min-height: 60rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -205,7 +212,6 @@ a {
       width: 90%; }
   .portofoliu__box {
     background-color: rgba(0, 128, 0, 0.4);
-    margin-bottom: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -244,8 +250,129 @@ a {
     opacity: none;
     visibility: hidden; }
 
-.popup {
+.grafic {
+  min-height: 70rem;
+  background-color: #e3e3e3;
+  padding-left: 15%;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .grafic__title {
+    font-size: 2rem;
+    line-height: 3rem; }
+    .grafic__title--border {
+      border-bottom: 2px solid #FCDE3B; }
+  .grafic__box--content {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  .grafic__paragraph {
+    font-size: 2rem;
+    font-weight: 700; }
+  .grafic__rotate {
+    position: relative;
+    margin-right: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    color: #FCDE3B;
+    transform: rotate(-90deg); }
+
+.graff {
+  margin: 5rem 0;
+  margin-top: 2.5rem;
+  width: 60rem;
+  min-height: 35rem;
+  border-bottom: 5px solid #646464;
+  border-left: 5px solid #646464;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between; }
+  .graff__month {
+    border-right: 5px solid #cacaca;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; }
+  .graff__month--all {
+    position: absolute;
+    top: 105%;
+    font-size: 1.4rem;
+    font-weight: 700; }
+
+.contact {
   background-color: rgba(255, 192, 203, 0.4);
+  height: 60rem;
+  padding-left: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .contact__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block; }
+    .contact__title::before {
+      content: "";
+      height: 100%;
+      width: 80%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all .4s;
+      border-bottom: 2px solid #FCDE3B; }
+    .contact__title:hover::before {
+      width: 100%; }
+  .contact__paragraph {
+    font-size: 1.6rem;
+    margin: 3rem 0; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.2rem; }
+
+.input {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
+  width: 80%;
+  border: none;
+  outline: none;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  color: #646464;
+  border-bottom: 3px solid #FCDE3B; }
+  .input::placeholder {
+    color: #e3e3e3;
+    font-weight: bold; }
+  .input:focus {
+    border-bottom: 3px solid #e7c404; }
+  .input:required:active {
+    border-bottom: 3px solid red; }
+
+.textarea {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1.5rem;
+  margin-bottom: 5rem;
+  color: #646464;
+  border-bottom: 3px solid #FCDE3B; }
+  .textarea:focus {
+    border-bottom: 3px solid #e7c404; }
+
+.popup {
+  background-color: rgba(252, 222, 59, 0.9);
   height: 100vh;
   width: 100vw;
   position: fixed;

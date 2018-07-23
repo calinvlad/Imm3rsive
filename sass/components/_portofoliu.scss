@@ -1,6 +1,6 @@
 .portofoliu {
     background-color: inherit;
-    height: 60rem;
+    min-height: 60rem;
 
     display: flex;
     flex-direction: column;
@@ -39,7 +39,6 @@
 
     &__box {
         background-color: rgba(green, .4);
-        margin-bottom: 3rem;
 
         display: flex;
         flex-direction: row;

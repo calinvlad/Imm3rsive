@@ -11,3 +11,13 @@ $('#play, #play1, #play2, #play3, #play4, #play5, #play6, #play7').click(functio
         'visibility': 'visible'
     })
 });
+
+
+// $('.grafic').mouseenter(function() {
+
+//     $('.grafic__rotate').css({
+//         'top': '-1rem'
+//     })
+// }).css({
+//     'transition': 'all .4s'
+// })
