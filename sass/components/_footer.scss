@@ -1,0 +1,78 @@
+.footer {
+    // margin-top: 8rem;
+    background-color: $blue;
+    color: $white;
+    height: 45rem;
+    position: relative;
+    padding-left: 15%;
+    padding-right: 15%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    &__logo {
+        height: 6rem;
+        position: absolute;
+        top: -3rem;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    &__box {
+        // background-color: rgba(red, .4);
+        width: 40%;
+        min-height: 20rem;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 2rem;
+        color: inherit;
+        font-weight: 700;
+        margin-bottom: 3rem;
+    }
+
+    &__adress {
+        font-size: 1.2rem;
+        margin: .5rem;
+        color: inherit;
+    }
+
+    &__social {
+        &--title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 5rem;
+        }
+
+        &--icon {
+            height: 3.5rem;
+            margin-right: 1rem;
+        }
+        
+    }
+}
+
+
+
+.footer__maps {
+    width: 60%;
+    height: 30rem;
+    background-color: red;
+    align-self: center;
+}
+
+.copyright {
+    font-size: .9rem;
+    color: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}

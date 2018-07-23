@@ -376,6 +376,60 @@ a {
     color: #646464;
     border-bottom: 3px solid #e7c404; }
 
+.footer {
+  background-color: blue;
+  color: #f4f4f4;
+  height: 45rem;
+  position: relative;
+  padding-left: 15%;
+  padding-right: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .footer__logo {
+    height: 6rem;
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translate(-50%); }
+  .footer__box {
+    width: 40%;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between; }
+  .footer__title {
+    font-size: 2rem;
+    color: inherit;
+    font-weight: 700;
+    margin-bottom: 3rem; }
+  .footer__adress {
+    font-size: 1.2rem;
+    margin: .5rem;
+    color: inherit; }
+  .footer__social--title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 5rem; }
+  .footer__social--icon {
+    height: 3.5rem;
+    margin-right: 1rem; }
+
+.footer__maps {
+  width: 60%;
+  height: 30rem;
+  background-color: red;
+  align-self: center; }
+
+.copyright {
+  font-size: .9rem;
+  color: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); }
+
 .popup {
   background-color: rgba(252, 222, 59, 0.9);
   height: 100vh;
@@ -464,7 +518,7 @@ button {
   font-size: 2rem;
   font-weight: 700;
   background-color: blue;
-  padding: 1rem 3rem;
+  padding: 1.25rem 3rem;
   color: #f4f4f4;
   border: none;
   outline: none;
@@ -491,15 +545,16 @@ button {
 
 .button--a {
   border-radius: 1rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 400; }
 
 .button--transparent {
   background-color: #f4f4f4;
   color: blue;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  padding: 1rem 3rem;
-  border: 2px solid blue;
+  padding: 1.5rem 3rem;
+  border: 1px solid blue;
   outline: none;
   position: relative;
   transition: all .4s; }

@@ -5,7 +5,7 @@ $('.popup, .popup__close').click(function() {
     })
 });
 
-$('#play, #play1, #play2, #play3, #play4, #play5, #play6, #play7').click(function() {
+$('#play, #play1, #play2, #play3, #play4, #play5, #play6, #play7, #play8, #play9, #play10, #play11').click(function() {
     $('.popup, .popup__close').css({
         'opacity': '1',
         'visibility': 'visible'
