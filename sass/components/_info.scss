@@ -1,6 +1,6 @@
 .info {
-    background-color: inherit;
-    height: 60rem;
+    // background-color: inherit;
+    height: 70rem;
 
     display: flex;
     flex-direction: row;
@@ -57,10 +57,17 @@
         font-size: 1.4rem;
         font-weight: 400;
         margin: 1.5rem 0;
+        width: 70%;
 
     }
 
     &__btn {
-        margin-top: 3rem;
+        position: relative;
+        top: 5rem;
+    }
+
+    &__img {
+        height: 100%;
+        z-index: -50;
     }
 }

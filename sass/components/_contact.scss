@@ -1,11 +1,25 @@
 .contact {
-    background-color: inherit;
-    height: 60rem;
+    // background-color: inherit;
+    height: 70rem;
     padding-left: 15%;
+    position: relative;
 
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+
+    &__bubble{
+        position: absolute;
+        top: 0;
+        left: 0;
+        // width: 17rem;
+        z-index: -50;
+    }
+
+    &__img {
+        height: 85%;
+    }
 
     &__title {
         font-size: 2.5rem;
@@ -41,7 +55,7 @@
     flex-direction: column;
     align-items: flex-start;
 
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     
 }
 
@@ -64,7 +78,7 @@
     }
 
     &::placeholder {
-        color: $grey;
+        color: $primary;
         font-weight: bold;
     }
 
@@ -90,7 +104,7 @@
     border-bottom: 3px solid $primary;
 
     &::placeholder {
-        color: $grey;
+        color: $primary;
     }
 
     &:focus {

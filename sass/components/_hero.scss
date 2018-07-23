@@ -1,6 +1,6 @@
 .hero {
     // background-color: $white;
-    height: 60rem;
+    height: 65rem;
     padding: 0 0 0 15%;
 
     display: flex;
@@ -8,7 +8,8 @@
     align-items: center;
 
     &__img {
-       
+       height: 105%;
+       z-index: -50;
     }
 
     &__box {

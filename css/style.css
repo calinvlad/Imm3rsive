@@ -58,11 +58,14 @@ a {
   transform: rotate(45deg); }
 
 .hero {
-  height: 60rem;
+  height: 65rem;
   padding: 0 0 0 15%;
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .hero__img {
+    height: 105%;
+    z-index: -50; }
   .hero__title {
     font-size: 3rem;
     line-height: 2.5rem; }
@@ -83,8 +86,8 @@ a {
       margin-right: 0; }
 
 .despre {
-  background-color: #e3e3e3;
-  min-height: 60rem;
+  background-color: #ededed;
+  height: 70rem;
   padding: 0 10%;
   display: flex;
   justify-content: center;
@@ -95,7 +98,6 @@ a {
   .despre__box--title {
     line-height: 2.5rem;
     padding: 2.5rem;
-    margin-top: 2.5rem;
     margin-bottom: 5rem;
     text-align: center;
     position: relative; }
@@ -132,13 +134,12 @@ a {
       font-weight: 700;
       margin: 1rem 0 .75rem 0; }
     .despre__content--paragraph {
-      width: 70%;
+      width: 80%;
       font-size: 1.2rem;
       text-align: center; }
 
 .info {
-  background-color: inherit;
-  height: 60rem;
+  height: 70rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -177,13 +178,19 @@ a {
   .info__paragraph {
     font-size: 1.4rem;
     font-weight: 400;
-    margin: 1.5rem 0; }
+    margin: 1.5rem 0;
+    width: 70%; }
   .info__btn {
-    margin-top: 3rem; }
+    position: relative;
+    top: 5rem; }
+  .info__img {
+    height: 100%;
+    z-index: -50; }
 
 .portofoliu {
   background-color: inherit;
-  min-height: 60rem;
+  min-height: 70rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -193,8 +200,7 @@ a {
   .portofoliu__box--title {
     line-height: 2.5rem;
     padding: 2.5rem;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
     text-align: center;
     position: relative; }
     .portofoliu__box--title::before {
@@ -252,12 +258,18 @@ a {
 
 .grafic {
   min-height: 70rem;
-  background-color: #e3e3e3;
+  background-color: #ededed;
   padding-left: 15%;
   padding-top: 5rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  .grafic__side {
+    position: absolute;
+    right: 0;
+    font-size: 12rem;
+    transform: rotate(90deg); }
   .grafic__title {
     font-size: 2rem;
     line-height: 3rem; }
@@ -284,14 +296,15 @@ a {
   margin-top: 2.5rem;
   width: 60rem;
   min-height: 35rem;
-  border-bottom: 5px solid #646464;
-  border-left: 5px solid #646464;
+  border-bottom: 5px solid #6e6e6e;
+  border-left: 5px solid #6e6e6e;
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: space-between; }
   .graff__month {
-    border-right: 5px solid #cacaca;
+    border-right: 5px solid #d4d4d4;
     min-height: 100%;
     width: 100%;
     position: relative;
@@ -303,14 +316,26 @@ a {
     top: 105%;
     font-size: 1.4rem;
     font-weight: 700; }
+  .graff__img {
+    width: 99%;
+    height: 100%;
+    position: absolute; }
 
 .contact {
-  background-color: inherit;
-  height: 60rem;
+  height: 70rem;
   padding-left: 15%;
+  position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center; }
+  .contact__bubble {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -50; }
+  .contact__img {
+    height: 85%; }
   .contact__title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -336,7 +361,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 1.2rem; }
+  font-size: 1.4rem; }
 
 .input {
   background-color: inherit;
@@ -347,12 +372,12 @@ a {
   border: none;
   outline: none;
   padding: 1.5rem;
-  color: #646464;
+  color: #6e6e6e;
   border-bottom: 3px solid #FCDE3B; }
   .input--middle {
     margin: 6rem 0; }
   .input::placeholder {
-    color: #e3e3e3;
+    color: #FCDE3B;
     font-weight: bold; }
   .input:focus {
     border-bottom: 3px solid #e7c404; }
@@ -371,9 +396,9 @@ a {
   margin-bottom: 5rem;
   border-bottom: 3px solid #FCDE3B; }
   .textarea::placeholder {
-    color: #e3e3e3; }
+    color: #FCDE3B; }
   .textarea:focus {
-    color: #646464;
+    color: #6e6e6e;
     border-bottom: 3px solid #e7c404; }
 
 .footer {
