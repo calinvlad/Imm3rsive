@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 *,
 *::after,
 *::before {
@@ -7,6 +24,12 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 76.87em) {
+    html {
+      font-size: 60%; } }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 55%; } }
 
 body {
   box-sizing: border-box;
@@ -60,6 +83,9 @@ a {
 .rotate {
   transform: rotate(45deg); }
 
+.width {
+  max-width: 100%; }
+
 .hero {
   top: 8rem;
   height: 65rem;
@@ -68,6 +94,12 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 76.87em) {
+    .hero {
+      height: 60rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .hero {
+      height: 47.5rem; } }
   .hero__bubble {
     position: absolute;
     bottom: 0;
@@ -79,10 +111,22 @@ a {
   .hero__title {
     font-size: 3rem;
     line-height: 2.5rem; }
+    @media only screen and (max-width: 76.87em) {
+      .hero__title {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .hero__title {
+        font-size: 2.25rem; } }
     .hero__title--sm {
       font-size: 2.25rem;
       margin-top: 1rem;
       margin-bottom: 2.5rem; }
+      @media only screen and (max-width: 76.87em) {
+        .hero__title--sm {
+          font-size: 2rem; } }
+      @media only screen and (max-width: 62.5em) {
+        .hero__title--sm {
+          font-size: 1.75rem; } }
   .hero__btn {
     font-size: 1.75rem; }
 
@@ -106,8 +150,14 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
+  @media only screen and (max-width: 62.5em) {
+    .despre {
+      height: 60rem; } }
   .despre__title {
     font-size: 2.5rem; }
+    @media only screen and (max-width: 62.5em) {
+      .despre__title {
+        font-size: 2rem; } }
   .despre__box--title {
     line-height: 2.5rem;
     padding: 2.5rem;
@@ -145,10 +195,18 @@ a {
     .despre__content--title {
       font-size: 1.4rem;
       margin: 1rem 0 .75rem 0; }
+      @media only screen and (max-width: 62.5em) {
+        .despre__content--title {
+          font-size: 1.2rem;
+          margin: .75rem 0 .5rem 0; } }
     .despre__content--paragraph {
       width: 80%;
       font-size: 1.2rem;
       text-align: center; }
+      @media only screen and (max-width: 62.5em) {
+        .despre__content--paragraph {
+          font-size: 1.1rem;
+          width: 90%; } }
 
 .info {
   height: 70rem;
@@ -157,6 +215,13 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 76.87em) {
+    .info {
+      height: 60rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .info {
+      height: 47.5rem;
+      margin-bottom: 10rem; } }
   .info__bubble {
     position: absolute;
     right: 10%;
@@ -171,11 +236,18 @@ a {
       z-index: -50; }
   .info__box {
     margin-right: 5%; }
+    @media only screen and (max-width: 76.87em) {
+      .info__box {
+        margin-right: 0;
+        width: 50%; } }
   .info__title {
     font-size: 2rem;
     display: inline-block;
     padding: 1rem 0;
     position: relative; }
+    @media only screen and (max-width: 76.87em) {
+      .info__title {
+        font-size: 1.75rem; } }
     .info__title::before {
       content: "";
       width: 60%;
@@ -199,11 +271,17 @@ a {
   .info__title--sm {
     font-size: 1.75rem;
     margin: 2rem 0 1.5rem 0; }
+    @media only screen and (max-width: 76.87em) {
+      .info__title--sm {
+        font-size: 1.5rem; } }
   .info__paragraph {
     font-size: 1.4rem;
     font-weight: 400;
     margin: 1.5rem 0;
     width: 70%; }
+    @media only screen and (max-width: 76.87em) {
+      .info__paragraph {
+        font-size: 1.3rem; } }
   .info__btn {
     position: relative;
     top: 5rem; }
@@ -221,12 +299,24 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 62.5em) {
+    .portofoliu {
+      min-height: 60rem; } }
   .portofoliu__bubble {
     position: absolute;
-    top: 2rem;
+    top: 10%;
     left: 0; }
+    @media only screen and (max-width: 62.5em) {
+      .portofoliu__bubble {
+        height: 15rem; } }
   .portofoliu__title {
     font-size: 2.5rem; }
+    @media only screen and (max-width: 76.87em) {
+      .portofoliu__title {
+        font-size: 2.25rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .portofoliu__title {
+        font-size: 2rem; } }
   .portofoliu__box--title {
     line-height: 2.5rem;
     padding: 2.5rem;
@@ -295,17 +385,16 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center; }
-  .grafic__side {
-    font-family: 'Libre Baskerville', serif;
-    position: absolute;
-    left: 55%;
-    color: rgba(254, 243, 185, 0.5);
-    font-size: 13rem;
-    transform: rotate(90deg);
-    z-index: 100; }
+  @media only screen and (max-width: 62.5em) {
+    .grafic {
+      min-height: 60rem;
+      padding-bottom: 5rem; } }
   .grafic__title {
     font-size: 2rem;
     line-height: 3rem; }
+    @media only screen and (max-width: 62.5em) {
+      .grafic__title {
+        font-size: 1.75rem; } }
     .grafic__title--border {
       border-bottom: 2px solid #FCDE3B; }
   .grafic__box--content {
@@ -316,6 +405,9 @@ a {
   .grafic__paragraph {
     font-size: 2rem;
     font-weight: 700; }
+    @media only screen and (max-width: 62.5em) {
+      .grafic__paragraph {
+        font-size: 1.75rem; } }
   .grafic__rotate {
     position: relative;
     margin-right: 3rem;
@@ -323,6 +415,10 @@ a {
     width: 3.5rem;
     color: #FCDE3B;
     transform: rotate(-90deg); }
+    @media only screen and (max-width: 62.5em) {
+      .grafic__rotate {
+        height: 3rem;
+        width: 3rem; } }
 
 .graff {
   margin: 5rem 0;
@@ -336,6 +432,14 @@ a {
   flex-direction: row;
   align-items: stretch;
   justify-content: space-between; }
+  @media only screen and (max-width: 76.87em) {
+    .graff {
+      width: 50rem;
+      min-height: 30rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .graff {
+      width: 40rem;
+      min-height: 25rem; } }
   .graff__month {
     border-right: 5px solid #d4d4d4;
     min-height: 100%;
@@ -458,62 +562,6 @@ a {
     .popup__close:active {
       transform: scale(0.95); }
 
-.btn:link, .btn:visited {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  display: inline-block;
-  position: relative;
-  border-radius: 1.7rem;
-  transition: all .2s; }
-
-.btn:hover {
-  box-shadow: 0 1rem 2rem rgba(48, 48, 50, 0.2); }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 0.1rem rgba(48, 48, 50, 0.2);
-  z-index: -2; }
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 1.7rem;
-  position: absolute;
-  top: .5rem;
-  left: 1rem;
-  z-index: -2;
-  transition: all .3s; }
-
-.btn-blue {
-  background: #0378db;
-  color: #f4f4f4;
-  padding: 1rem 2.2rem; }
-  .btn-blue::after {
-    border: 1px solid #0378db; }
-  .btn-blue:active {
-    position: relative;
-    background: #036ac2; }
-    .btn-blue:active::after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      border: 2px solid #0378db; }
-
-button {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  display: inline-block;
-  padding: 1.5rem 2.2rem;
-  border-radius: 1.7rem;
-  transition: all .2s;
-  outline: none; }
-
 button {
   z-index: 500;
   border-radius: 1rem; }
@@ -528,6 +576,10 @@ button {
   outline: none;
   position: relative;
   cursor: pointer; }
+  @media only screen and (max-width: 62.5em) {
+    .button {
+      font-size: 1.4rem;
+      padding: 1.25rem 2rem; } }
   .button::before {
     content: "";
     height: 100%;
@@ -562,6 +614,12 @@ button {
   outline: none;
   position: relative;
   transition: all .4s; }
+  @media only screen and (max-width: 76.87em) {
+    .button--transparent {
+      font-size: 1.2rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .button--transparent {
+      padding: 1.25rem 2rem; } }
   .button--transparent:hover {
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2); }
   .button--transparent:active {
@@ -569,11 +627,14 @@ button {
 
 .logo {
   height: 6rem; }
+  @media only screen and (max-width: 62.5em) {
+    .logo {
+      height: 5.5rem; } }
 
 .header {
   z-index: 500;
   background-color: #f4f4f4;
-  padding: 0 5%;
+  padding: 0 7.5%;
   height: 8rem;
   border-bottom: 1px solid #FCDE3B;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
@@ -591,6 +652,10 @@ button {
     margin: 1.5rem;
     padding: 1rem 1.5rem;
     position: relative; }
+    @media only screen and (max-width: 62.5em) {
+      .header__link {
+        font-size: 1.2rem;
+        margin: .5rem; } }
     .header__link::before {
       content: "";
       width: 0%;

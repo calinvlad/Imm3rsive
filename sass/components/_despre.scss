@@ -8,8 +8,16 @@
     align-items: center;
     flex-direction: column;
 
+    @include respond(1000) {
+        height: 60rem;
+        }
+
     &__title {
         font-size: 2.5rem;
+
+        @include respond(1000) {
+            font-size: 2rem;
+        }
     }
 
     &__box--title {
@@ -65,12 +73,22 @@
         &--title {
             font-size: 1.4rem;
             margin: 1rem 0 .75rem 0;
+
+            @include respond(1000) {
+                font-size: 1.2rem;
+                margin: .75rem 0 .5rem 0;
+            }
         }
 
         &--paragraph {
             width: 80%;
             font-size: 1.2rem;
             text-align: center;
+
+            @include respond(1000) {
+                font-size: 1.1rem;
+                width: 90%;
+            }
         }
     }
 }

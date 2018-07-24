@@ -9,6 +9,14 @@
     justify-content: space-between;
     align-items: center;
 
+    @include respond(1230) {
+        height: 60rem;
+    }
+
+    @include respond(1000) {
+        height: 47.5rem;
+    }
+
     &__bubble {
         position: absolute;
         bottom: 0;
@@ -30,15 +38,32 @@
         font-size: 3rem;
         line-height: 2.5rem;
 
+        @include respond(1230) {
+            font-size: 2.5rem;
+        }
+
+        @include respond(1000) {
+            font-size: 2.25rem;
+        }
+
 
         &--sm {
             font-size: 2.25rem;
             margin-top: 1rem;
             margin-bottom: 2.5rem;
+
+            @include respond(1230) {
+                font-size: 2rem;
+            }
+
+            @include respond(1000) {
+                font-size: 1.75rem;
+            }
         }
     }
 
     &__btn {
-        font-size: 1.75rem; 
+        font-size: 1.75rem 
+
     }
 }
