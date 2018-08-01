@@ -17,6 +17,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @mixin respond($breakpoint) {
+    @if $breakpoint == 550 {
+        @media only screen and (max-width: 34.37em) { @content };    //768px
+    }
     @if $breakpoint == 768 {
         @media only screen and (max-width: 48em) { @content };    //768px
     }
@@ -27,6 +30,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
         @media only screen and (max-width: 76.87em) { @content };    //1230px
     }
     @if $breakpoint == 1400 {
-        @media only screen and (min-width: 87.5.5em) { @content };    //1400
+        @media only screen and (min-width: 87.5em) { @content };    //1400
+    }
+    @if $breakpoint == 1600 {
+        @media only screen and (min-width: 100em) { @content };    //1400
     }
 }

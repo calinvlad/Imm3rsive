@@ -1,19 +1,29 @@
 .grafic {
-    min-height: 70rem;
+    // min-height: 70rem;
+    height: 100rem;
     background-color: $grey;
     padding-left: 15%;
     padding-top: 5rem;
     position: relative;
     // padding-bottom: 5rem;
+    margin-top: -1rem;
     
     display: flex;
     flex-direction: column;
     justify-content: center;
     // align-items: flex-start;
 
+    // @include respond(1400) {
+    //     min-height: 75rem;
+    // }
+
     @include respond(1000) {
         min-height: 60rem;
         padding-bottom: 5rem;
+    }
+
+    @include respond(768) {
+        min-height: 70rem;
     }
 
     // &__side {
@@ -38,6 +48,11 @@
         @include respond(1000) {
             font-size: 1.75rem;
         }
+
+        @include respond(768) {
+            font-size: 2rem;
+        }
+
         &--border {
             border-bottom: 2px solid $primary;
         }
@@ -58,6 +73,10 @@
 
         @include respond(1000) {
             font-size: 1.75rem;
+        }
+
+        @include respond(768) {
+            font-size: 2rem;
         }
 
     }
@@ -101,6 +120,11 @@
     @include respond(1000) {
         width: 40rem;
         min-height: 25rem;
+    }
+
+    @include respond(768) {
+        width: 40rem;
+        min-height: 30rem;
     }
 
     &__month {

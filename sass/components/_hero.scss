@@ -9,12 +9,20 @@
     justify-content: space-between;
     align-items: center;
 
+    @include respond(1600) {
+        height: 75rem;
+    }
+
     @include respond(1230) {
         height: 60rem;
     }
 
     @include respond(1000) {
         height: 47.5rem;
+    }
+
+    @include respond(768) {
+        height: 50rem;
     }
 
     &__bubble {
@@ -27,6 +35,17 @@
     &__img {
        height: 105%;
        z-index: -50;
+
+       @include respond(1600) {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+        // @include respond(768) {
+            
+        // }
     }
 
     &__box {
@@ -38,6 +57,10 @@
         font-size: 3rem;
         line-height: 2.5rem;
 
+        @include respond(1600) {
+            font-size: 3rem;
+        }
+
         @include respond(1230) {
             font-size: 2.5rem;
         }
@@ -46,11 +69,19 @@
             font-size: 2.25rem;
         }
 
+        @include respond(768) {
+            font-size: 2.7rem;
+        }
+
 
         &--sm {
             font-size: 2.25rem;
             margin-top: 1rem;
             margin-bottom: 2.5rem;
+
+            @include respond(1600) {
+                font-size: 2rem;
+            }
 
             @include respond(1230) {
                 font-size: 2rem;
@@ -59,11 +90,15 @@
             @include respond(1000) {
                 font-size: 1.75rem;
             }
+
+            @include respond(768) {
+                font-size: 2.25rem; 
+            }
         }
     }
 
-    &__btn {
-        font-size: 1.75rem 
+    // &__btn {
+    //     font-size: 1.5rem 
 
-    }
+    // }
 }

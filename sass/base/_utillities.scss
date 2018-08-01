@@ -25,3 +25,10 @@
 .width {
     max-width: 100%;
 }
+
+.tag {
+    position: absolute;
+    top: -6rem;
+    left: 50%;
+    transform: translateX(-50%);
+}

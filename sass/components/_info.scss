@@ -1,25 +1,35 @@
 .info {
     // background-color: inherit;
-    height: 70rem;
-    position: relative;
+    height: 100vh;
+    position: relative; 
+    overflow: hidden;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    @include respond(1230) {
-        height: 60rem;
-    }
+    // @include respond(1400) {
+    //     height: 75rem;
+    // }
+
+    // @include respond(1230) {
+    //     height: 60rem;
+    // }
 
     @include respond(1000) {
-        height: 47.5rem;
+        // height: 47.5rem;
+        height: 100vh;
         margin-bottom: 10rem;
+    }
+
+    @include respond(768) {
+        height: 60rem;
     }
 
     &__bubble {
         position: absolute;
-        right: 10%;
+        left: 90%;
         bottom: 0;
         width: 17.5%;
         z-index: -50;
@@ -36,6 +46,12 @@
     &__box {
         // background-color: rgba(green, .4);
         margin-right: 5%;
+        width: 50%;
+
+        @include respond(1400) {
+            margin-right: 0;
+            
+        }
 
         @include respond(1230) {
             margin-right: 0;
@@ -52,6 +68,10 @@
 
         @include respond(1230) {
             font-size: 1.75rem;
+        }
+
+        @include respond(768) {
+            font-size: 2rem;
         }
 
         &::before {
@@ -90,6 +110,10 @@
         @include respond(1230) {
             font-size: 1.5rem;
         }
+
+        @include respond(768) {
+            font-size: 1.75rem;
+        }
     }
 
     &__paragraph {
@@ -100,6 +124,10 @@
 
         @include respond(1230) {
             font-size: 1.3rem;
+        }
+
+        @include respond(768) {
+            font-size: 1.4rem;
         }
 
     }
